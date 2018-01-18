@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+	<h2>Blog</h2>
+	{{ blog.picture }}
+
+	{% if isOwner %}
+	<a href="{% url 'editor:create' %}">Create Article</a>
+	{% endif %}
+{% endblock %}

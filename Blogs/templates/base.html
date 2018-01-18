@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+<body>
+	<div id="wrapper">
+		<header id="header">
+            <ul class="list-unstyled list-inline">
+	            <div class="col-md-1 col-md-offset-2">
+	                <li>
+	                    <a class="btn btn-default" href="{% url 'mainPage:main' %}">
+	                        Main
+	                    </a>
+	                </li>
+	            </div>
+                {% if not login %}
+                <div class="col-md-1 col-md-offset-4">
+	                <li>
+	                    <a class="btn btn-default" href="{% url 'mainPage:access:logAUserIn' %}">
+	                        Log in
+	                    </a>
+	                </li>
+                </div>
+                {% else %}
+                <div class="col-md-1 col-md-offset-4">
+	                <li>
+	                    <a class="btn btn-default" href="{% url 'mainPage:access:logout' %}">
+	                        Log out
+	                    </a>
+	                </li>
+                </div>
+                {% endif %}
+	            <div class="col-md-1">
+	                <li>
+	                    <a class="btn btn-default" href="{% url 'mainPage:access:registration' %}">
+	                        Register
+	                    </a>
+	                </li>
+	            </div>
+	            <div class="col-md-1">
+	                <li>
+	                    <a class="btn btn-default" href="{% url 'account:account' %}">
+	                        Account
+	                    </a>
+	                </li>
+	            </div>
+            </ul>
+        </header>
+		<div id="body">{% block body %}{% endblock %}</div>
+	</div>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	{% block scripts %}{% endblock %}
+</body>
+</html>
