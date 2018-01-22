@@ -22,9 +22,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('mainPage.urls')),
     url(r'^account/', include('account.urls')),
-    url(r'^blogs/', include('bloging.urls')),
-    url(r'^articles/', include('editor.urls'))
-    #url(r'^editor/', include('editor.urls'))
+    url(r'^blog', include('bloging.urls'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -3,9 +3,9 @@
 
 {% block body %}
 	<h2>Blog</h2>
-	{{ blog.picture }}
+	{{ blog }}
 
 	{% if isOwner %}
-	<a href="{% url 'editor:create' %}">Create Article</a>
+	<a href="{% url 'blog:article:create' blog.pk %}">Create Article</a>
 	{% endif %}
 {% endblock %}

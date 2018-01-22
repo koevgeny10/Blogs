@@ -2,7 +2,7 @@
 
 
 {% block body %}
-<form action="{% url 'editor:create' %}" method="post" enctype="multipart/form-data">
+<form action="{% url 'blog:article:create' postTo %}" method="post" enctype="multipart/form-data">
 	{% csrf_token %}
 	{{ form }}
 	<input type="submit" value="Ok">

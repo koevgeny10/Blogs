@@ -6,14 +6,7 @@ from . import models
 # Чет странно
 class BlogsView(ListView):
     template_name = 'bloging\listBlog.html'
-    #model = models.Blogs
-    
-    def get_queryset(self):
-        if self.request.path.startswith('/articles'):
-            self.model = models.Articles
-        else:
-            self.model = models.Blogs
-        return super(BlogsView, self).get_queryset()
+    model = models.Blogs
 
 
 class BlogView(DetailView):
@@ -23,7 +16,7 @@ class BlogView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(BlogView, self).get_context_data(**kwargs)
-        print(self.object.owner == self.request.user.profiles)
+        #print(self.object.owner == self.request.user.profiles)
         if self.object.owner == self.request.user.profiles:
             context['isOwner'] = True
         else:
@@ -34,9 +27,9 @@ class BlogView(DetailView):
 class CreateBlog(CreateView):
     template_name = 'bloging\createBlog.html'
     model = models.Blogs
-    fields = ['name', 'picture', 'about']
+    fields = ['name', 'picture', 'about', 'subscribers']
     #success_url = '/'
-    
+
     def form_valid(self, form):
         form.instance.owner = self.request.user.profiles
         return super(CreateBlog, self).form_valid(form)

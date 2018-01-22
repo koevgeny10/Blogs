@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from bloging.models import Blogs
 
 
@@ -11,3 +12,7 @@ class Articles(models.Model):
 
     def __str__(self):
         return self.name + ' from ' + self.blog
+
+    def get_absolute_url(self):
+        return reverse('blog:article:article', kwargs={'pk': self.blog.pk,
+                                                       'id': self.pk})
