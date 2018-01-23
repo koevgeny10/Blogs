@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<form action="{{ object.get_absolute_url }}delete/" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	<label for="">Are you shure?</label>
+	<input type="submit" value="Ok">
+</form>
+{% endblock %}

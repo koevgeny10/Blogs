@@ -6,6 +6,8 @@
 	{{ blog }}
 
 	{% if isOwner %}
-	<a href="{% url 'blog:article:create' blog.pk %}">Create Article</a>
+	<a href="{{ blog.get_absolute_url }}update/">Update Blog</a>
+	<a href="{{ blog.get_absolute_url }}delete/">Delete Blog</a>
+	<a href="{{ blog.get_absolute_url }}article/create/">Create Article</a>
 	{% endif %}
 {% endblock %}

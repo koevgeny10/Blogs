@@ -11,7 +11,7 @@ class Articles(models.Model):
     dislikes = models.BigIntegerField(default=0)
 
     def __str__(self):
-        return self.name + ' from ' + self.blog
+        return self.name + ' from ' + self.blog.name
 
     def get_absolute_url(self):
         return reverse('blog:article:article', kwargs={'pk': self.blog.pk,

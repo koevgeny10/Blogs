@@ -3,7 +3,7 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from . import models
 
-# Чет странно
+
 class BlogsView(ListView):
     template_name = 'bloging\listBlog.html'
     model = models.Blogs
@@ -16,7 +16,6 @@ class BlogView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(BlogView, self).get_context_data(**kwargs)
-        #print(self.object.owner == self.request.user.profiles)
         if self.object.owner == self.request.user.profiles:
             context['isOwner'] = True
         else:
@@ -28,7 +27,6 @@ class CreateBlog(CreateView):
     template_name = 'bloging\createBlog.html'
     model = models.Blogs
     fields = ['name', 'picture', 'about', 'subscribers']
-    #success_url = '/'
 
     def form_valid(self, form):
         form.instance.owner = self.request.user.profiles
@@ -40,12 +38,6 @@ class UpdateBlog(UpdateView):
     template_name = 'bloging\\updateBlog.html'
     model = models.Blogs
     fields = ['name', 'picture', 'about']
-    success_url = '/'
-
-#    def get_context_data(self, **kwargs):
-#        context = super(UpdateBlog, self).get_context_data(**kwargs)
-#        context['object'] = self.object
-#        return context
 
 
 class DeleteBlog(DeleteView):
