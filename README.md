@@ -1,0 +1,1 @@
+This site is for bloggers who have some ideas and those who want read them
