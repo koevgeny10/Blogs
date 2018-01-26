@@ -33,7 +33,6 @@ class CreateBlog(CreateView):
         return super(CreateBlog, self).form_valid(form)
 
 
-# Добавь проверку пользователя
 class UpdateBlog(UpdateView):
     template_name = 'bloging\\updateBlog.html'
     model = models.Blogs

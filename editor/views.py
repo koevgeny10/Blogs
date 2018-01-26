@@ -9,7 +9,8 @@ class ArticlesView(ListView):
     template_name = r'editor\articles.html'
     
     def get_queryset(self):
-        self.queryset = models.Articles.objects.filter(blog__exact=Blogs.objects.get(pk=self.kwargs['pk']))
+        self.queryset = models.Articles.objects.filter(
+                blog__exact=Blogs.objects.get(pk=self.kwargs['pk']))
         return super(ArticlesView, self).get_queryset()
 
 

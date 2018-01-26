@@ -1,6 +1,4 @@
 from django.shortcuts import render
-from django.views.generic.detail import DetailView
-#from django.views.generic.list import ListView
 from django.contrib.auth.decorators import login_required
 from . import forms, models
 
@@ -20,8 +18,3 @@ def account(request):
         form = forms.AvatarsForm()
         avatar = models.Profile.objects.get(username=request.user.username).picture
     return render(request, 'account\\account.html', {'form': form, 'avatar': avatar})
-
-
-#class Account(DetailView):
-#    template_name = r'account\account.html'
-#    model = models.Profile
