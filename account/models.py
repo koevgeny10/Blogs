@@ -10,7 +10,7 @@ class Profile(models.Model):
     username = models.OneToOneField(User,
                                     on_delete=models.CASCADE,
                                     to_field='username',
-                                    related_name='profiles')
+                                    related_name='profile')
     picture = models.ImageField(upload_to='avatars/%Y/%m/%d/',
                                 default='/default/avatar/avatar.png')
     subscribes = ArrayField(models.TextField(), null=True)
