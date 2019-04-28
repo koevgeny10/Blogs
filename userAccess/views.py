@@ -5,6 +5,10 @@ from django.views.generic.edit import CreateView, FormView
 from . import forms
 from account import models
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 class RegistrationView(CreateView):
     template_name = 'userAccess\\registration.html'
@@ -18,6 +22,9 @@ class RegistrationView(CreateView):
                                         password=form.instance.password)
         models.Profile(username=user).save()
         login(self.request, user)
+        
+        logger.debug('kek===========================================================================================================================================================================')
+        
         return HttpResponseRedirect(self.success_url)
 
 

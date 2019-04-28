@@ -1,0 +1,368 @@
+(0.898) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.125) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.616) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '9dyejk0a8825s1nl8yafn7lk5e1n2tmk' AND "django_session"."expire_date" > '2018-02-19T09:24:36.714312+00:00'::timestamptz); args=('9dyejk0a8825s1nl8yafn7lk5e1n2tmk', datetime.datetime(2018, 2, 19, 9, 24, 36, 714312, tzinfo=<UTC>))
+"GET / HTTP/1.1" 200 1447
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "F:\Instal\Anaconda\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLPattern main ^$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern logAUserIn ^login/$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern registration ^registration/$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'account.urls' from 'F:\\Programming\\Python\\Blogs\\account\\urls.py'> (account:account) ^account/>], [<RegexURLResolver <module 'bloging.urls' from 'F:\\Programming\\Python\\Blogs\\bloging\\urls.py'> (blog:blog) ^blog>], [<RegexURLPattern None ^media\/(?P<path>.*)$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "F:\Instal\Anaconda\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLPattern main ^$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern logAUserIn ^login/$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern registration ^registration/$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'account.urls' from 'F:\\Programming\\Python\\Blogs\\account\\urls.py'> (account:account) ^account/>], [<RegexURLResolver <module 'bloging.urls' from 'F:\\Programming\\Python\\Blogs\\bloging\\urls.py'> (blog:blog) ^blog>], [<RegexURLPattern None ^media\/(?P<path>.*)$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'account.urls' from 'F:\\\\Programming\\\\Python\\\\Blogs\\\\account\\\\urls.py'> (account:account) ^account/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "F:\Instal\Anaconda\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLPattern main ^$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern logAUserIn ^login/$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern registration ^registration/$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'account.urls' from 'F:\\Programming\\Python\\Blogs\\account\\urls.py'> (account:account) ^account/>], [<RegexURLResolver <module 'bloging.urls' from 'F:\\Programming\\Python\\Blogs\\bloging\\urls.py'> (blog:blog) ^blog>], [<RegexURLPattern None ^media\/(?P<path>.*)$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'bloging.urls' from 'F:\\\\Programming\\\\Python\\\\Blogs\\\\bloging\\\\urls.py'> (blog:blog) ^blog>"
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3140
+"GET /registration/ HTTP/1.1" 200 2193
+(0.257) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'wer' LIMIT 1; args=('wer',)
+(0.447) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$36000$xMrV0hWISakQ$fbXNLlx7wxVyqGMUb9PGwHOFjeg3J1Zig7p1LbOawVI=', NULL, false, 'wer', '', '', 'wer@gmail.com', false, true, '2018-02-19T09:25:01.745909+00:00'::timestamptz) RETURNING "auth_user"."id"; args=('pbkdf2_sha256$36000$xMrV0hWISakQ$fbXNLlx7wxVyqGMUb9PGwHOFjeg3J1Zig7p1LbOawVI=', None, False, 'wer', '', '', 'wer@gmail.com', False, True, datetime.datetime(2018, 2, 19, 9, 25, 1, 745909, tzinfo=<UTC>))
+(0.151) INSERT INTO "account_profile" ("username_id", "picture", "subscribes") VALUES ('wer', '/default/avatar/avatar.png', NULL) RETURNING "account_profile"."id"; args=('wer', '/default/avatar/avatar.png', None)
+(0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'gwu3svb9lj8pvkgn2ntxndlxz9p51p4k' LIMIT 1; args=('gwu3svb9lj8pvkgn2ntxndlxz9p51p4k',)
+(0.012) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") VALUES ('gwu3svb9lj8pvkgn2ntxndlxz9p51p4k', 'MTY1NTU5NzM5MDkyYmNiYzM2MTk0ZmQ4ODU1MWZlMzA4ZGQzYmJiMTp7fQ==', '2018-03-05T09:25:02.684417+00:00'::timestamptz); args=('gwu3svb9lj8pvkgn2ntxndlxz9p51p4k', 'MTY1NTU5NzM5MDkyYmNiYzM2MTk0ZmQ4ODU1MWZlMzA4ZGQzYmJiMTp7fQ==', datetime.datetime(2018, 3, 5, 9, 25, 2, 684417, tzinfo=<UTC>))
+(0.039) UPDATE "auth_user" SET "last_login" = '2018-02-19T09:25:02.700438+00:00'::timestamptz WHERE "auth_user"."id" = 18; args=(datetime.datetime(2018, 2, 19, 9, 25, 2, 700438, tzinfo=<UTC>), 18)
+(0.020) UPDATE "django_session" SET "session_data" = 'YTU2ZTFmMzY3NzE1OGQ0OGQwMDIyYWYxY2YxNzU5ZDI4MmQ0YzUxMTp7Il9hdXRoX3VzZXJfaWQiOiIxOCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiOTAxOGY0ODNjYzIwNDAyNTU2ZDU3NmM5NGViNmY2ZGNmMjFiMjM3YyJ9', "expire_date" = '2018-03-05T09:25:02.742416+00:00'::timestamptz WHERE "django_session"."session_key" = 'gwu3svb9lj8pvkgn2ntxndlxz9p51p4k'; args=('YTU2ZTFmMzY3NzE1OGQ0OGQwMDIyYWYxY2YxNzU5ZDI4MmQ0YzUxMTp7Il9hdXRoX3VzZXJfaWQiOiIxOCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiOTAxOGY0ODNjYzIwNDAyNTU2ZDU3NmM5NGViNmY2ZGNmMjFiMjM3YyJ9', datetime.datetime(2018, 3, 5, 9, 25, 2, 742416, tzinfo=<UTC>), 'gwu3svb9lj8pvkgn2ntxndlxz9p51p4k')
+"POST /registration/ HTTP/1.1" 302 0
+(0.030) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'gwu3svb9lj8pvkgn2ntxndlxz9p51p4k' AND "django_session"."expire_date" > '2018-02-19T09:25:02.790457+00:00'::timestamptz); args=('gwu3svb9lj8pvkgn2ntxndlxz9p51p4k', datetime.datetime(2018, 2, 19, 9, 25, 2, 790457, tzinfo=<UTC>))
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 18; args=(18,)
+"GET / HTTP/1.1" 200 1449
+(0.008) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'gwu3svb9lj8pvkgn2ntxndlxz9p51p4k' AND "django_session"."expire_date" > '2018-02-19T09:27:29.195595+00:00'::timestamptz); args=('gwu3svb9lj8pvkgn2ntxndlxz9p51p4k', datetime.datetime(2018, 2, 19, 9, 27, 29, 195595, tzinfo=<UTC>))
+(0.004) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 18; args=(18,)
+"GET /registration/ HTTP/1.1" 200 2195
+(0.004) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'ghj' LIMIT 1; args=('ghj',)
+(0.000) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$36000$C6PfUiHMIiPc$6j2IdXpk8He2WPSKDIuyX28fBj79JOP7l8+8Fol7Ez8=', NULL, false, 'ghj', '', '', 'gj@gmail.com', false, true, '2018-02-19T09:27:48.151578+00:00'::timestamptz) RETURNING "auth_user"."id"; args=('pbkdf2_sha256$36000$C6PfUiHMIiPc$6j2IdXpk8He2WPSKDIuyX28fBj79JOP7l8+8Fol7Ez8=', None, False, 'ghj', '', '', 'gj@gmail.com', False, True, datetime.datetime(2018, 2, 19, 9, 27, 48, 151578, tzinfo=<UTC>))
+(0.004) INSERT INTO "account_profile" ("username_id", "picture", "subscribes") VALUES ('ghj', '/default/avatar/avatar.png', NULL) RETURNING "account_profile"."id"; args=('ghj', '/default/avatar/avatar.png', None)
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'gwu3svb9lj8pvkgn2ntxndlxz9p51p4k' AND "django_session"."expire_date" > '2018-02-19T09:27:48.247604+00:00'::timestamptz); args=('gwu3svb9lj8pvkgn2ntxndlxz9p51p4k', datetime.datetime(2018, 2, 19, 9, 27, 48, 247604, tzinfo=<UTC>))
+(0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'gwu3svb9lj8pvkgn2ntxndlxz9p51p4k'; args=('gwu3svb9lj8pvkgn2ntxndlxz9p51p4k',)
+(0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('gwu3svb9lj8pvkgn2ntxndlxz9p51p4k'); args=('gwu3svb9lj8pvkgn2ntxndlxz9p51p4k',)
+(0.004) UPDATE "auth_user" SET "last_login" = '2018-02-19T09:27:48.259581+00:00'::timestamptz WHERE "auth_user"."id" = 19; args=(datetime.datetime(2018, 2, 19, 9, 27, 48, 259581, tzinfo=<UTC>), 19)
+(0.004) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'xzqft6u8iot2s2hrn4z6g3h6oto73uo0' LIMIT 1; args=('xzqft6u8iot2s2hrn4z6g3h6oto73uo0',)
+(0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") VALUES ('xzqft6u8iot2s2hrn4z6g3h6oto73uo0', 'YzAyNWU4MjBlN2MzYzk1NGZlNzY0YWFlZWU1ODZhNzFmNjljMjc0NDp7Il9hdXRoX3VzZXJfaWQiOiIxOSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiNGQ2N2EzMzNlNjc0YTU2MzBhNDBiMTUzYzc5ZWYwYTExYzNlOGVjNiJ9', '2018-03-05T09:27:48.267596+00:00'::timestamptz); args=('xzqft6u8iot2s2hrn4z6g3h6oto73uo0', 'YzAyNWU4MjBlN2MzYzk1NGZlNzY0YWFlZWU1ODZhNzFmNjljMjc0NDp7Il9hdXRoX3VzZXJfaWQiOiIxOSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiNGQ2N2EzMzNlNjc0YTU2MzBhNDBiMTUzYzc5ZWYwYTExYzNlOGVjNiJ9', datetime.datetime(2018, 3, 5, 9, 27, 48, 267596, tzinfo=<UTC>))
+"POST /registration/ HTTP/1.1" 302 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'xzqft6u8iot2s2hrn4z6g3h6oto73uo0' AND "django_session"."expire_date" > '2018-02-19T09:27:48.295590+00:00'::timestamptz); args=('xzqft6u8iot2s2hrn4z6g3h6oto73uo0', datetime.datetime(2018, 2, 19, 9, 27, 48, 295590, tzinfo=<UTC>))
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 19; args=(19,)
+"GET / HTTP/1.1" 200 1449
+(0.724) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.078) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+Internal Server Error: /
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Programming\Python\Blogs\mainPage\views.py", line 6, in mainPage
+    print(request.META['HTTP_USER_AGENT '])
+KeyError: 'HTTP_USER_AGENT '
+(0.461) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'xu41ozcdm6c3bj4zzj3fqzqdw44de33z' AND "django_session"."expire_date" > '2018-02-20T15:39:38.266521+00:00'::timestamptz); args=('xu41ozcdm6c3bj4zzj3fqzqdw44de33z', datetime.datetime(2018, 2, 20, 15, 39, 38, 266521, tzinfo=<UTC>))
+"GET / HTTP/1.1" 500 71651
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "F:\Instal\Anaconda\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLPattern main ^$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern logAUserIn ^login/$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern registration ^registration/$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'account.urls' from 'F:\\Programming\\Python\\Blogs\\account\\urls.py'> (account:account) ^account/>], [<RegexURLResolver <module 'bloging.urls' from 'F:\\Programming\\Python\\Blogs\\bloging\\urls.py'> (blog:blog) ^blog>], [<RegexURLPattern None ^media\/(?P<path>.*)$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "F:\Instal\Anaconda\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLPattern main ^$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern logAUserIn ^login/$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern registration ^registration/$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'account.urls' from 'F:\\Programming\\Python\\Blogs\\account\\urls.py'> (account:account) ^account/>], [<RegexURLResolver <module 'bloging.urls' from 'F:\\Programming\\Python\\Blogs\\bloging\\urls.py'> (blog:blog) ^blog>], [<RegexURLPattern None ^media\/(?P<path>.*)$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'account.urls' from 'F:\\\\Programming\\\\Python\\\\Blogs\\\\account\\\\urls.py'> (account:account) ^account/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "F:\Instal\Anaconda\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLPattern main ^$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern logAUserIn ^login/$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern registration ^registration/$>], [<RegexURLResolver <module 'mainPage.urls' from 'F:\\Programming\\Python\\Blogs\\mainPage\\urls.py'> (mainPage:mainPage) ^>, <RegexURLResolver <module 'userAccess.urls' from 'F:\\Programming\\Python\\Blogs\\userAccess\\urls.py'> (access:access) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'account.urls' from 'F:\\Programming\\Python\\Blogs\\account\\urls.py'> (account:account) ^account/>], [<RegexURLResolver <module 'bloging.urls' from 'F:\\Programming\\Python\\Blogs\\bloging\\urls.py'> (blog:blog) ^blog>], [<RegexURLPattern None ^media\/(?P<path>.*)$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'bloging.urls' from 'F:\\\\Programming\\\\Python\\\\Blogs\\\\bloging\\\\urls.py'> (blog:blog) ^blog>"
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3140
+(0.003) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+"GET / HTTP/1.1" 200 1447
+(0.000) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+Internal Server Error: /
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Programming\Python\Blogs\mainPage\views.py", line 6, in mainPage
+    print(request.META.HTTP_USER_AGENT)
+AttributeError: 'dict' object has no attribute 'HTTP_USER_AGENT'
+"GET / HTTP/1.1" 500 71747
+"GET /login HTTP/1.1" 301 0
+"GET /login/ HTTP/1.1" 200 1916
+(0.144) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'Usernamef'; args=('Usernamef',)
+"POST /login/ HTTP/1.1" 200 1944
+(0.051) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'f'; args=('f',)
+(0.063) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'ggphloj8vvm0eepjbnsb9gisxmjdklwx' LIMIT 1; args=('ggphloj8vvm0eepjbnsb9gisxmjdklwx',)
+(0.100) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") VALUES ('ggphloj8vvm0eepjbnsb9gisxmjdklwx', 'MTY1NTU5NzM5MDkyYmNiYzM2MTk0ZmQ4ODU1MWZlMzA4ZGQzYmJiMTp7fQ==', '2018-03-06T15:42:13.713321+00:00'::timestamptz); args=('ggphloj8vvm0eepjbnsb9gisxmjdklwx', 'MTY1NTU5NzM5MDkyYmNiYzM2MTk0ZmQ4ODU1MWZlMzA4ZGQzYmJiMTp7fQ==', datetime.datetime(2018, 3, 6, 15, 42, 13, 713321, tzinfo=<UTC>))
+(0.027) UPDATE "auth_user" SET "last_login" = '2018-02-20T15:42:13.817674+00:00'::timestamptz WHERE "auth_user"."id" = 14; args=(datetime.datetime(2018, 2, 20, 15, 42, 13, 817674, tzinfo=<UTC>), 14)
+(0.001) UPDATE "django_session" SET "session_data" = 'YjM3YzY2YmE4NDIzZjE4ZTFkMGQ3NTZiZDZmZjgxMDg3YjlhMzMzYzp7Il9hdXRoX3VzZXJfaWQiOiIxNCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiOGZmMmUzMTE3OWNjZjJkMzZmYjE0NDc0Mzk3NWE2OWI5MDk4OWYwYiJ9', "expire_date" = '2018-03-06T15:42:13.847451+00:00'::timestamptz WHERE "django_session"."session_key" = 'ggphloj8vvm0eepjbnsb9gisxmjdklwx'; args=('YjM3YzY2YmE4NDIzZjE4ZTFkMGQ3NTZiZDZmZjgxMDg3YjlhMzMzYzp7Il9hdXRoX3VzZXJfaWQiOiIxNCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiOGZmMmUzMTE3OWNjZjJkMzZmYjE0NDc0Mzk3NWE2OWI5MDk4OWYwYiJ9', datetime.datetime(2018, 3, 6, 15, 42, 13, 847451, tzinfo=<UTC>), 'ggphloj8vvm0eepjbnsb9gisxmjdklwx')
+"POST /login/ HTTP/1.1" 302 0
+Internal Server Error: /
+Traceback (most recent call last):
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "F:\Instal\Anaconda\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Programming\Python\Blogs\mainPage\views.py", line 6, in mainPage
+    print(request.META.HTTP_USER_AGENT)
+AttributeError: 'dict' object has no attribute 'HTTP_USER_AGENT'
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'ggphloj8vvm0eepjbnsb9gisxmjdklwx' AND "django_session"."expire_date" > '2018-02-20T15:42:13.894000+00:00'::timestamptz); args=('ggphloj8vvm0eepjbnsb9gisxmjdklwx', datetime.datetime(2018, 2, 20, 15, 42, 13, 894000, tzinfo=<UTC>))
+(0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 14; args=(14,)
+"GET / HTTP/1.1" 500 72098
+(0.006) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'ggphloj8vvm0eepjbnsb9gisxmjdklwx' AND "django_session"."expire_date" > '2018-02-20T15:44:34.586997+00:00'::timestamptz); args=('ggphloj8vvm0eepjbnsb9gisxmjdklwx', datetime.datetime(2018, 2, 20, 15, 44, 34, 586997, tzinfo=<UTC>))
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 14; args=(14,)
+"GET / HTTP/1.1" 200 1449
+(0.005) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'ggphloj8vvm0eepjbnsb9gisxmjdklwx' AND "django_session"."expire_date" > '2018-02-20T15:47:06.246530+00:00'::timestamptz); args=('ggphloj8vvm0eepjbnsb9gisxmjdklwx', datetime.datetime(2018, 2, 20, 15, 47, 6, 246530, tzinfo=<UTC>))
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 14; args=(14,)
+"GET / HTTP/1.1" 200 1449

@@ -16,7 +16,7 @@
 	                    </a>
 	                </li>
 	            </div>
-                {% if not login %}
+                {% if not user.is_authenticated %}
                 <div class="col-md-1 col-md-offset-4">
 	                <li>
 	                    <a class="btn btn-default" href="{% url 'mainPage:access:logAUserIn' %}">
