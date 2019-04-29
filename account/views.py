@@ -13,8 +13,8 @@ def account(request):
         if form.is_valid():
             form.save()
             # Попробуй вызывать account с request.method = 'GET'
-        return render(request, 'account\\account.html', {'form': form})
+        return render(request, 'account/account.html', {'form': form})
     else:
         form = forms.AvatarsForm()
         avatar = models.Profile.objects.get(username=request.user.username).picture
-    return render(request, 'account\\account.html', {'form': form, 'avatar': avatar})
+    return render(request, 'account/account.html', {'form': form, 'avatar': avatar})

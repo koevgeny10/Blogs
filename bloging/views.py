@@ -10,12 +10,12 @@ testForBlogs = lambda self: self.request.user == self.get_object().owner.usernam
 
 
 class BlogsView(ListView):
-    template_name = 'bloging\listBlog.html'
+    template_name = 'bloging/listBlog.html'
     model = models.Blogs
 
 
 class BlogView(DetailView):
-    template_name = 'bloging\detailBlog.html'
+    template_name = 'bloging/detailBlog.html'
     model = models.Blogs
     context_object_name = 'blog'
 
@@ -29,7 +29,7 @@ class BlogView(DetailView):
 
 
 class CreateBlog(LoginRequiredMixin, CreateView):
-    template_name = 'bloging\createBlog.html'
+    template_name = 'bloging/createBlog.html'
     model = models.Blogs
     fields = ['name', 'picture', 'about', 'subscribers']
 
@@ -39,7 +39,7 @@ class CreateBlog(LoginRequiredMixin, CreateView):
 
 
 class UpdateBlog(UserPassesTestMixin, UpdateView):
-    template_name = 'bloging\\updateBlog.html'
+    template_name = 'bloging/updateBlog.html'
     model = models.Blogs
     fields = ['name', 'picture', 'about']
     
@@ -49,7 +49,7 @@ class UpdateBlog(UserPassesTestMixin, UpdateView):
 
 
 class DeleteBlog(UserPassesTestMixin, DeleteView):
-    template_name = 'bloging\deleteBlog.html'
+    template_name = 'bloging/deleteBlog.html'
     model = models.Blogs
     success_url = '/'
     

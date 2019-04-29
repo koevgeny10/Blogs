@@ -7,7 +7,7 @@ from account import models
 
 
 class RegistrationView(CreateView):
-    template_name = 'userAccess\\registration.html'
+    template_name = 'userAccess/registration.html'
     model = User
     fields = ['username', 'email', 'password']
     success_url = '/'
@@ -22,7 +22,7 @@ class RegistrationView(CreateView):
 
 
 class LoginView(FormView):
-    template_name = 'userAccess\login.html'
+    template_name = 'userAccess/login.html'
     form_class = forms.Login
     success_url = '/'
 
