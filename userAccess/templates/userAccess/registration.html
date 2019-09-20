@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 
+{% load bootstrap4 %}
+
 {% block title %}registration{% endblock %}
 
 {% block body %}
-<form action="{% url 'mainPage:access:registration' %}" method="POST">
+<form action="{% url 'access:registration' %}" method="POST">
 	{% csrf_token %}
-	{{form}}
-	<input type="submit" value="Ok">
+	{% bootstrap_form form %}
+    {% buttons %}
+	<button type="submit" class="btn btn-primary">
+      Submit
+    </button>
+    {% endbuttons %}
 </form>
 {% endblock %}

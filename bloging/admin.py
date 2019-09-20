@@ -3,7 +3,7 @@ from . import models
 
 
 class PageAdmin(admin.ModelAdmin):
-    list_display = ['id', 'owner', 'name', 'picture', 'about', 'subscribers']
+    list_display = ['owner', 'name', 'picture', 'about']
 
 
 admin.site.register(models.Blogs, PageAdmin)

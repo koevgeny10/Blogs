@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'bootstrap4',
+    'captcha',
     'editor.apps.EditorConfig',
     'bloging.apps.BlogingConfig',
     'account.apps.AccountConfig',
@@ -143,3 +145,21 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
 LOGIN_URL = '/login/'
+
+LOGIN_REDIRECT_URL = '/'
+
+LOGOUT_REDIRECT_URL = '/'
+
+EMAIL_USE_TLS = True
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_HOST_USER = DEFAULT_FROM_EMAIL = 'kozlovskije629@gmail.com'
+
+EMAIL_HOST_PASSWORD = 'ehjsfg45jfg'
+
+EMAIL_PORT = 587
+
+RECAPTCHA_PUBLIC_KEY = '6Lf35UoUAAAAAEsaw_ejabGH9OaQoQF_rpDd0Z3C'
+
+RECAPTCHA_PRIVATE_KEY = '6Lf35UoUAAAAAHRu4INhGkoEwYJ-_Aqif1d9QEMd'

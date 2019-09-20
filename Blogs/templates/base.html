@@ -16,29 +16,44 @@
                         Main
                     </a>
 	            </div>
-                {% if not login %}
-                <div class="col-auto offset-md-4">
-                    <a class="btn btn-default" href="{% url 'mainPage:access:logAUserIn' %}">
-                        Log in
-                    </a>
-                </div>
+                {% if user.is_authenticated %}
+                    <div class="col-auto offset-md-4">
+                        <a class="btn btn-default" href="{% url 'access:logout' %}">
+                            Log out
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a class="btn btn-default" href="{% url 'account:account' %}">
+                            Account
+                        </a>
+                    </div>
                 {% else %}
-                <div class="col-auto offset-md-4">
-                    <a class="btn btn-default" href="{% url 'mainPage:access:logout' %}">
-                        Log out
-                    </a>
-                </div>
+                    <!--<div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Log in | Join
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="{# url 'mainPage:access:login' #}">Log in</a>
+                            <a class="dropdown-item" href="{# url 'mainPage:access:registration' #}">Registration</a>
+                        </div>
+                    </div>-->
+
+                    <div class="col-auto offset-md-4">
+                        <a class="btn btn-default" href="{% url 'access:login' %}">
+                            Log in
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a class="btn btn-default" href="{% url 'access:registration' %}">
+                            Register
+                        </a>
+                    </div>
                 {% endif %}
-	            <div class="col-auto">
-                    <a class="btn btn-default" href="{% url 'mainPage:access:registration' %}">
+	            <!--<div class="col-auto">
+                    <a class="btn btn-default" href="{# url 'mainPage:access:registration' #}">
                         Register
                     </a>
-	            </div>
-	            <div class="col-auto">
-                    <a class="btn btn-default" href="{% url 'account:account' %}">
-                        Account
-                    </a>
-	            </div>
+	            </div>-->
             </div>
         </header>
 		<div id="body">{% block body %}{% endblock %}</div>
