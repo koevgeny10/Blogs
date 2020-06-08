@@ -6,7 +6,8 @@ from . import models
 from Blogs.myModule import getLoginUrl
 
 
-testForBlogs = lambda self: self.request.user == self.get_object().owner.username
+testForBlogs = lambda self: \
+    self.request.user == self.get_object().owner.username
 
 
 class BlogsView(ListView):

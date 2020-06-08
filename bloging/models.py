@@ -22,7 +22,11 @@ class Blogs(models.Model):
         default='/default/blogsMainImage/859_big.jpg'
     )
     about = models.TextField(null=True)
-    subscribe = models.ManyToManyField(Profile, through='Subscribe', related_name='a') # Кажется это все только усложняет
+    subscribe = models.ManyToManyField(
+        Profile,
+        through='Subscribe',
+        related_name='a'
+    )
     moment = models.DateTimeField(auto_now=True)
 
     class Meta:
@@ -30,15 +34,27 @@ class Blogs(models.Model):
         ordering = ['moment']
 
     def __str__(self):
-        return self.name + ' Author: ' + str(self.owner)
+        return f'{self.name} Author: {self.owner}'
 
     def get_absolute_url(self):
         return reverse('blog:blog', kwargs={'pk': self.pk})
 
 
 class Subscribe(models.Model):
-    username = models.ForeignKey(Profile, on_delete=models.CASCADE, to_field='username', related_name='subscribes', related_query_name='subscribe')
-    subscribe = models.ForeignKey(Blogs, on_delete=models.CASCADE, to_field='name', related_name='subscribers', related_query_name='subscriber')
+    username = models.ForeignKey(
+        Profile,
+        on_delete=models.CASCADE,
+        to_field='username',
+        related_name='subscribes',
+        related_query_name='subscribe'
+    )
+    subscribe = models.ForeignKey(
+        Blogs,
+        on_delete=models.CASCADE,
+        to_field='name',
+        related_name='subscribers',
+        related_query_name='subscriber'
+    )
     moment = models.DateTimeField(auto_now=True)
 
     class Meta:

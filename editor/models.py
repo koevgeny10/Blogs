@@ -22,7 +22,7 @@ class Articles(models.Model):
         ordering = ['moment']
 
     def __str__(self):
-        return self.name + ' from ' + self.blog.name
+        return f'{self.name} from {self.blog.name}'
 
     def get_absolute_url(self):
         return reverse('blog:article:article', kwargs={'pk': self.blog.pk,
