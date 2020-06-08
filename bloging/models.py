@@ -27,7 +27,6 @@ class Blogs(models.Model):
 
     class Meta:
         get_latest_by = 'moment'
-        order_with_respect_to = 'owner'
         ordering = ['moment']
 
     def __str__(self):
@@ -44,5 +43,4 @@ class Subscribe(models.Model):
 
     class Meta:
         get_latest_by = 'moment'
-        order_with_respect_to = 'username'
         ordering = ['moment']

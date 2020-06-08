@@ -19,7 +19,6 @@ class Articles(models.Model):
 
     class Meta:
         get_latest_by = 'moment'
-        order_with_respect_to = 'blog'
         ordering = ['moment']
 
     def __str__(self):
