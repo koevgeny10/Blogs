@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'bootstrap4',
+    'captcha',
     'editor.apps.EditorConfig',
     'bloging.apps.BlogingConfig',
     'account.apps.AccountConfig',
@@ -51,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
 ROOT_URLCONF = 'Blogs.urls'
@@ -86,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'Blogs',
         'USER': 'postgres',
-        'PASSWORD': 'qwerty',
+        'PASSWORD': 'postgres',
         'HOST': '127.0.0.1',
         'PORT': '5432'
     }
@@ -97,18 +99,18 @@ DATABASES = {
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    # },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    # },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    # },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    # },
 ]
 
 
@@ -137,39 +139,20 @@ MEDIA_URL = '/media/'
 
 LOGIN_URL = '/login/'
 
+LOGIN_REDIRECT_URL = '/'
 
-# Emails
+LOGOUT_REDIRECT_URL = '/'
 
 EMAIL_USE_TLS = True
 
 EMAIL_HOST = 'smtp.gmail.com'
 
+EMAIL_HOST_USER = DEFAULT_FROM_EMAIL = 'kozlovskije629@gmail.com'
+
+EMAIL_HOST_PASSWORD = 'ehjsfg45jfg'
+
 EMAIL_PORT = 587
 
-EMAIL_HOST_USER = 'koevgeny10@gmail.com'
+RECAPTCHA_PUBLIC_KEY = '6Lf35UoUAAAAAEsaw_ejabGH9OaQoQF_rpDd0Z3C'
 
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-
-EMAIL_HOST_PASSWORD = 'yaetoya10'
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': BASE_DIR + '/Blogs/logs/kek.log',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
-            'propagate': True,
-        },
-    },
-}
+RECAPTCHA_PRIVATE_KEY = '6Lf35UoUAAAAAHRu4INhGkoEwYJ-_Aqif1d9QEMd'

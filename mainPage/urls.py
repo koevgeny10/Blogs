@@ -1,8 +1,9 @@
-from django.conf.urls import url, include
+from django.urls import path, include
 from . import views
 
 app_name = 'mainPage'
+
 urlpatterns = [
-    url(r'^$', views.mainPage, name='main'),
-    url(r'^', include('userAccess.urls'))
+    path(r'', views.mainPage, name='main'),
+    # path(r'', include('userAccess.urls'))
 ]

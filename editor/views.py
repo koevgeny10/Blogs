@@ -13,7 +13,7 @@ def testForArticles(self):
 
 
 class ArticlesView(ListView):
-    template_name = r'editor\articles.html'
+    template_name = 'editor/articles.html'
     
     def get_queryset(self):
         self.queryset = models.Articles.objects.filter(
@@ -22,7 +22,7 @@ class ArticlesView(ListView):
 
 
 class ArticleView(DetailView):
-    template_name = r'editor\article.html'
+    template_name = 'editor/article.html'
     model = models.Articles
     context_object_name = 'article'
     pk_url_kwarg = 'id'
@@ -37,7 +37,7 @@ class ArticleView(DetailView):
 
 
 class CreateArticle(UserPassesTestMixin, CreateView):
-    template_name = 'editor\create.html'
+    template_name = 'editor/create.html'
     model = models.Articles
     fields = ['name', 'text', 'likes', 'dislikes']
     
@@ -56,7 +56,7 @@ class CreateArticle(UserPassesTestMixin, CreateView):
 
 
 class UpdateArticle(UserPassesTestMixin, UpdateView):
-    template_name = r'editor\update.html'
+    template_name = 'editor/update.html'
     model = models.Articles
     fields = ['name', 'text', 'likes', 'dislikes']
     pk_url_kwarg = 'id'
@@ -67,7 +67,7 @@ class UpdateArticle(UserPassesTestMixin, UpdateView):
 
 
 class DeleteArticle(UserPassesTestMixin, DeleteView):
-    template_name = 'editor\delete.html'
+    template_name = 'editor/delete.html'
     model = models.Articles
     pk_url_kwarg = 'id'
     success_url = '/'

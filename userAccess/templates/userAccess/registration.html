@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html' %}
 
 {% block title %}registration{% endblock %}
@@ -8,4 +9,22 @@
 	{{form}}
 	<input type="submit" value="Ok">
 </form>
+=======
+{% extends 'base.html' %}
+
+{% load bootstrap4 %}
+
+{% block title %}registration{% endblock %}
+
+{% block body %}
+<form action="{% url 'access:registration' %}" method="POST">
+	{% csrf_token %}
+	{% bootstrap_form form %}
+    {% buttons %}
+	<button type="submit" class="btn btn-primary">
+      Submit
+    </button>
+    {% endbuttons %}
+</form>
+>>>>>>> dev
 {% endblock %}

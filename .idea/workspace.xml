@@ -2,103 +2,69 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a37bc3f-060c-4d38-a2a1-9b87daba3aae" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Blogs/settings.py" afterPath="$PROJECT_DIR$/Blogs/settings.py" />
-      <change beforePath="$PROJECT_DIR$/Blogs/templates/base.html" afterPath="$PROJECT_DIR$/Blogs/templates/base.html" />
-      <change beforePath="$PROJECT_DIR$/editor/admin.py" afterPath="$PROJECT_DIR$/editor/admin.py" />
-      <change beforePath="$PROJECT_DIR$/editor/apps.py" afterPath="$PROJECT_DIR$/editor/apps.py" />
-      <change beforePath="$PROJECT_DIR$/editor/migrations/0004_initial.py" afterPath="$PROJECT_DIR$/editor/migrations/0004_initial.py" />
-      <change beforePath="$PROJECT_DIR$/editor/migrations/0005_auto_20180118_1537.py" afterPath="$PROJECT_DIR$/editor/migrations/0005_auto_20180118_1537.py" />
-      <change beforePath="$PROJECT_DIR$/editor/migrations/0006_delete_dataforarticles.py" afterPath="$PROJECT_DIR$/editor/migrations/0006_delete_dataforarticles.py" />
-      <change beforePath="$PROJECT_DIR$/editor/migrations/0007_articles.py" afterPath="$PROJECT_DIR$/editor/migrations/0007_articles.py" />
-      <change beforePath="$PROJECT_DIR$/editor/migrations/0008_articles_text.py" afterPath="$PROJECT_DIR$/editor/migrations/0008_articles_text.py" />
-      <change beforePath="$PROJECT_DIR$/editor/migrations/0009_auto_20180118_1901.py" afterPath="$PROJECT_DIR$/editor/migrations/0009_auto_20180118_1901.py" />
-      <change beforePath="$PROJECT_DIR$/editor/migrations/0010_articles.py" afterPath="$PROJECT_DIR$/editor/migrations/0010_articles.py" />
-      <change beforePath="$PROJECT_DIR$/editor/models.py" afterPath="$PROJECT_DIR$/editor/models.py" />
-      <change beforePath="$PROJECT_DIR$/editor/templates/editor/article.html" afterPath="$PROJECT_DIR$/editor/templates/editor/article.html" />
-      <change beforePath="$PROJECT_DIR$/editor/templates/editor/articles.html" afterPath="$PROJECT_DIR$/editor/templates/editor/articles.html" />
-      <change beforePath="$PROJECT_DIR$/editor/templates/editor/create.html" afterPath="$PROJECT_DIR$/editor/templates/editor/create.html" />
-      <change beforePath="$PROJECT_DIR$/editor/templates/editor/delete.html" afterPath="$PROJECT_DIR$/editor/templates/editor/delete.html" />
-      <change beforePath="$PROJECT_DIR$/editor/templates/editor/update.html" afterPath="$PROJECT_DIR$/editor/templates/editor/update.html" />
-      <change beforePath="$PROJECT_DIR$/editor/tests.py" afterPath="$PROJECT_DIR$/editor/tests.py" />
-      <change beforePath="$PROJECT_DIR$/editor/urls.py" afterPath="$PROJECT_DIR$/editor/urls.py" />
-      <change beforePath="$PROJECT_DIR$/editor/views.py" afterPath="$PROJECT_DIR$/editor/views.py" />
-      <change beforePath="$PROJECT_DIR$/mainPage/views.py" afterPath="$PROJECT_DIR$/mainPage/views.py" />
-      <change beforePath="$PROJECT_DIR$/userAccess/views.py" afterPath="$PROJECT_DIR$/userAccess/views.py" />
+      <change afterPath="$PROJECT_DIR$/Blogs/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/migrations/0002_profile_moment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bloging/migrations/0002_auto_20190703_1141.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/editor/migrations/0002_articles_moment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userAccess/templates/userAccess/login2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userAccess/templates/userAccess/logout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userAccess/templates/userAccess/password_change_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userAccess/templates/userAccess/password_reset_email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userAccess/templates/userAccess/password_reset_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userAccess/templates/userAccess/password_reset_subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Blogs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Blogs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blogs/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blogs/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blogs/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Blogs/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blogs/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blogs/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/migrations/0002_auto_20171218_2102.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/migrations/0002_auto_20171218_2102.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/migrations/0003_auto_20171231_1921.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/migrations/0003_auto_20171231_1921.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/migrations/0004_profile_subscribes.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/migrations/0004_profile_subscribes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/migrations/0005_auto_20180101_1351.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/migrations/0005_auto_20180101_1351.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/migrations/0006_auto_20180127_1747.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/migrations/0006_auto_20180127_1747.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloging/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/bloging/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloging/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/bloging/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloging/migrations/0002_auto_20171231_1957.py" beforeDir="false" afterPath="$PROJECT_DIR$/bloging/migrations/0002_auto_20171231_1957.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloging/migrations/0003_articles.py" beforeDir="false" afterPath="$PROJECT_DIR$/bloging/migrations/0003_articles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloging/migrations/0004_auto_20171231_2113.py" beforeDir="false" afterPath="$PROJECT_DIR$/bloging/migrations/0004_auto_20171231_2113.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloging/migrations/0005_auto_20180118_1548.py" beforeDir="false" afterPath="$PROJECT_DIR$/bloging/migrations/0005_auto_20180118_1548.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloging/migrations/0006_articles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloging/migrations/0007_auto_20180122_1801.py" beforeDir="false" afterPath="$PROJECT_DIR$/bloging/migrations/0007_auto_20180122_1801.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloging/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bloging/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloging/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bloging/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloging/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bloging/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/editor/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/migrations/0004_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/migrations/0005_auto_20180118_1537.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/migrations/0006_delete_dataforarticles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/migrations/0007_articles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/migrations/0008_articles_text.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/migrations/0009_auto_20180118_1901.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/migrations/0010_articles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/editor/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/editor/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/editor/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainPage/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainPage/templates/mainPage/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainPage/templates/mainPage/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainPage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainPage/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainPage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainPage/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.in" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userAccess/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/userAccess/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userAccess/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userAccess/templates/userAccess/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/userAccess/templates/userAccess/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userAccess/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/userAccess/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userAccess/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/userAccess/views.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="createBlog.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bloging/templates/bloging/createBlog.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/editor/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bloging/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mixins.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/mixins.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myModule.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Blogs/myModule.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/views/generic/edit.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2550">
-              <caret line="157" column="8" lean-forward="false" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -115,70 +81,13 @@
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Blogs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Blogs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
-              <item name="bloging" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Blogs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
-              <item name="editor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Blogs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
-              <item name="userAccess" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -193,142 +102,7 @@
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25718608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
-    <watches-manager />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bloging/templates/bloging/createBlog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/editor/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/views/generic/edit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2550">
-          <caret line="157" column="8" lean-forward="false" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userAccess/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloging/templates/bloging/createBlog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/views/generic/edit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2550">
-          <caret line="157" column="8" lean-forward="false" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userAccess/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloging/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/editor/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/mixins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blogs/myModule.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
