@@ -8,7 +8,7 @@ from account import models
 
 
 class RegistrationView(CreateView):
-    template_name = 'userAccess/registration.html'
+    template_name = 'registration/registration.html'
     form_class = forms.User_Creation_Form
     success_url = '/'
 
