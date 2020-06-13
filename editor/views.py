@@ -3,75 +3,65 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import UserPassesTestMixin
 from . import models
-from bloging.models import Blogs
-from Blogs.myModule import getLoginUrl
+from blogs.models import Blog
+from utils.my_module import get_login_url
 
 
-def testForArticles(self):
-    self.blog = models.Blogs.objects.get(pk=self.kwargs['pk'])
-    return self.request.user == self.blog.owner.username
+def test_for_articles(self):
+    self.blog = Blog.objects.get(id=self.kwargs.get('blog_id'))
+    return self.request.user == self.blog.owner.user
 
 
 class ArticlesView(ListView):
     template_name = 'editor/articles.html'
+    model = models.Article
     
     def get_queryset(self):
-        self.queryset = models.Articles.objects.filter(
-                blog__exact=Blogs.objects.get(pk=self.kwargs['pk']))
-        return super(ArticlesView, self).get_queryset()
+        blog_id = self.kwargs.get('blog_id')
+        if blog_id:
+            self.queryset = models.Article.objects.filter(
+                blog=Blog.objects.get(id=blog_id)
+            )
+        return super().get_queryset()
 
 
 class ArticleView(DetailView):
     template_name = 'editor/article.html'
-    model = models.Articles
+    model = models.Article
     context_object_name = 'article'
-    pk_url_kwarg = 'id'
-    
-    def get_context_data(self, **kwargs):
-        context = super(ArticleView, self).get_context_data(**kwargs)
-        if self.object.blog.owner == self.request.user.profile:
-            context['isOwner'] = True
-        else:
-            context['isOwner'] = False
-        return context
+    pk_url_kwarg = 'article_id'
 
 
 class CreateArticle(UserPassesTestMixin, CreateView):
     template_name = 'editor/create.html'
-    model = models.Articles
-    fields = ['name', 'text', 'likes', 'dislikes']
-    
-    test_func = testForArticles
-    
-    get_login_url = getLoginUrl
+    model = models.Article
+    fields = ['name', 'text']
+    test_func = test_for_articles
+    get_login_url = get_login_url
     
     def get_context_data(self, **kwargs):
-        context = super(CreateArticle, self).get_context_data(**kwargs)
-        context['postTo'] = self.kwargs['pk']
+        context = super().get_context_data(**kwargs)
+        context['blog_id'] = self.kwargs.get('blog_id')
         return context
     
     def form_valid(self, form):
-        form.instance.blog = self.blog
-        return super(CreateArticle, self).form_valid(form)
+        form.instance.blog = self.blog  # TODO !
+        return super().form_valid(form)
 
 
 class UpdateArticle(UserPassesTestMixin, UpdateView):
     template_name = 'editor/update.html'
-    model = models.Articles
-    fields = ['name', 'text', 'likes', 'dislikes']
-    pk_url_kwarg = 'id'
-    
-    test_func = testForArticles
-    
-    get_login_url = getLoginUrl
+    model = models.Article
+    fields = ['name', 'text']
+    pk_url_kwarg = 'article_id'
+    test_func = test_for_articles
+    get_login_url = get_login_url
 
 
 class DeleteArticle(UserPassesTestMixin, DeleteView):
     template_name = 'editor/delete.html'
-    model = models.Articles
-    pk_url_kwarg = 'id'
+    model = models.Article
+    pk_url_kwarg = 'article_id'
     success_url = '/'
-    
-    test_func = testForArticles
-    
-    get_login_url = getLoginUrl
+    test_func = test_for_articles
+    get_login_url = get_login_url

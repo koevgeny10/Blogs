@@ -8,7 +8,7 @@ class LoginForm(AuthenticationForm):
     captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox)
 
 
-class User_Creation_Form(UserCreationForm):
+class MyUserCreationForm(UserCreationForm):
     captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox)
 
     class Meta(UserCreationForm.Meta):

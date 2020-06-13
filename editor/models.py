@@ -1,17 +1,16 @@
 from django.db import models
 from django.urls import reverse
-from bloging.models import Blogs
+from blogs.models import Blog
 
 
-class Articles(models.Model):
+class Article(models.Model):
     blog = models.ForeignKey(
-        Blogs,
+        Blog,
         on_delete=models.CASCADE,
-        to_field='name',
         related_name='articles',
         related_query_name='article'
     )
-    name = models.TextField(primary_key=True, help_text='please be short')
+    name = models.TextField(unique=True, help_text='please be short')
     text = models.TextField(null=True)
     likes = models.BigIntegerField(default=0)
     dislikes = models.BigIntegerField(default=0)
@@ -25,5 +24,7 @@ class Articles(models.Model):
         return f'{self.name} from {self.blog.name}'
 
     def get_absolute_url(self):
-        return reverse('blog:article:article', kwargs={'pk': self.blog.pk,
-                                                       'id': self.pk})
+        return reverse(
+            'blogs:article:article',
+            kwargs={'blog_id': self.blog.id, 'article_id': self.id}
+        )

@@ -5,8 +5,8 @@
 	<h2>Article</h2>
 	{{ article }}
 
-	{% if isOwner %}
-	<a href="{{ article.get_absolute_url }}update/">Update Article</a>
-	<a href="{{ article.get_absolute_url }}delete/">Delete Article</a>
+	{% if article.blog.owner.user == user %}
+		<a href="{% url 'blogs:article:update' article.blog.id article.id %}">Update Article</a>
+		<a href="{% url 'blogs:article:delete' article.blog.id article.id %}">Delete Article</a>
 	{% endif %}
 {% endblock %}

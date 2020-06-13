@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<form action="{% url 'blogs:delete' object.id %}" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	<label for="">Are you shure?</label>
+	<input type="submit" value="Ok">
+</form>
+{% endblock %}

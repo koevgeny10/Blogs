@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+	<h2>Blog</h2>
+	{{ blog }}
+
+	{% if blog.owner.user == user %}
+		<a href="{% url 'blogs:update' blog.id %}">Update Blog</a>
+		<a href="{% url 'blogs:delete' blog.id %}">Delete Blog</a>
+		<a href="{% url 'blogs:article:create' blog.id %}">Create Article</a>
+	{% endif %}
+{% endblock %}

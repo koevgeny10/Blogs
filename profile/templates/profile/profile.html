@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}profile{% endblock %}
+
+{% block body %}
+<img src="{{ avatar.url }}">
+<form action="{% url 'profile:profile' %}" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	{{form}}
+	<input type="submit" value="Ok">
+</form>
+<a href="{% url 'blogs:create' %}">Create blog</a>
+<a href="{% url 'password_change' %}">Change password</a>
+{% endblock %}
